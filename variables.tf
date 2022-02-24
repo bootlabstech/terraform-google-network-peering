@@ -14,25 +14,69 @@ variable "peer_network" {
 }
 
 variable "export_custom_routes" {
-  description = "whether to export the custom routes to the peer network"
+  description = <<-EOT
+  {
+   "type": "json",
+   "purpose": "autocomplete",
+   "data": [
+  "true",
+  "false"
+   ],
+   "default":false,
+   "description": "whether to export the custom routes to the peer network"
+}
+EOT
   type        = bool
   default     = false
 }
 
 variable "import_peer_custom_routes" {
-  description = "whether to import the custom routes from the peer network"
+  description = <<-EOT
+  {
+   "type": "json",
+   "purpose": "autocomplete",
+   "data": [
+  "true",
+  "false"
+   ],
+   "default":false,
+   "description": "whether to import the custom routes from the peer network"
+}
+EOT
   type        = bool
   default     = false
 }
 
 variable "export_subnet_routes_with_public_ip" {
-  description = "whether subnet routes with public IP range are exported"
+  description = <<-EOT
+  {
+   "type": "json",
+   "purpose": "autocomplete",
+   "data": [
+  "true",
+  "false"
+   ],
+   "default":true,
+   "description": "whether subnet routes with public IP range are exported"
+}
+EOT
   type        = bool
   default     = true
 }
 
 variable "import_subnet_routes_with_public_ip" {
-  description = "whether subnet routes with public IP range are imported"
+  description = <<-EOT
+  {
+   "type": "json",
+   "purpose": "autocomplete",
+   "data": [
+  "true",
+  "false"
+   ],
+   "default":false,
+   "description": "whether subnet routes with public IP range are imported"
+}
+EOT
   type        = bool
   default     = false
 }
