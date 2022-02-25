@@ -36,3 +36,7 @@ variable "import_subnet_routes_with_public_ip" {
   type        = bool
   default     = false
 }
+variable "tags" {
+  type        = list(string)
+  description = "this will be used for tagging resources."
+}
